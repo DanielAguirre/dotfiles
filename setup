@@ -1,0 +1,36 @@
+#!/bin/bash
+# Setup the enviroment
+
+sudo apt-update
+sudo apt-upgrade
+
+#packages & libraries
+sudo apt-get install vim git curl gcc bson htop zsh -y
+
+#set up zsh 
+chsh -s $(which zsh)
+
+#Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Node setup
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+
+#Go gvm package 
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+source /home/daniel/.gvm/scripts/gvm
+
+gvm install go1.4 -B
+gvm use go1.4
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.5
+
+#Postgresql
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+#docker
+sudo curl -sSL https://get.docker.com/ | sh
+curl -sSL https://get.docker.com/ | sh'
