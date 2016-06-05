@@ -31,6 +31,10 @@ gvm install go1.5
 #Postgresql
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 
+#tmux
+sudo apt install -y libevent-dev libncurses-dev pkg-config
+sudo apt install tmux 
+
+
 #docker
 sudo curl -sSL https://get.docker.com/ | sh
-curl -sSL https://get.docker.com/ | sh'
