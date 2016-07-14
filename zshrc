@@ -1,4 +1,4 @@
-source .aliases
+source ~/dotfiles/aliases
 # Path to your oh-my-zsh installation.
   export ZSH=/home/daniel/.oh-my-zsh
 

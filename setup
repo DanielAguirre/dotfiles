@@ -5,7 +5,7 @@ sudo apt-update
 sudo apt-upgrade
 
 #packages & libraries
-sudo apt-get install vim git curl gcc bson htop zsh -y
+sudo apt-get install vim git curl gcc bson htop zsh build-essential cmake python-dev python3-dev  -y
 
 #set up zsh 
 chsh -s $(which zsh)

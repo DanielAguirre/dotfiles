@@ -33,6 +33,20 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Code highlighting and linting
 Plugin 'scrooloose/syntastic' "Run linters and display errors etc
 
+Plugin 'Yggdroot/indentLine'
+
+" Auto close
+Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'fatih/vim-go'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'yegappan/mru'
+
+Plugin 'wakatime/vim-wakatime'
+
+Plugin 'mattn/emmet-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -97,24 +111,18 @@ no <Up> <NOP>
 no <Down> <NOP>
 no <Left> <NOP>
 no <Right> <NOP>
-ino <Up> <NOP>
-ino <Down> <NOP>
-ino <Left> <NOP>
-ino <Right> <NOP>
+" ino <Up> <NOP>
+" ino <Down> <NOP>
+" ino <Left> <NOP>
+" ino <Right> <NOP>
 vno <Up> <NOP>
 vno <Down> <NOP>
 vno <Left> <NOP>
 vno <Right> <NOP>
 
 
-" Quick pairs
-imap <leader> ' '' <ESC>i
-imap <leader> " "" <ESC>i
-imap <leader> " "" <ESC>i
-imap <leader> " "" <ESC>i
-
-
 autocmd vimenter * NERDTree
+autocmd vimenter * IndentLinesEnable
 
 """ INSERT CLIPBOARD COPY & PASTE SUPPORT
 set pastetoggle=<F2> "F" before pasting to preserve identation
@@ -135,3 +143,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:javascript_plugin_jsdoc = 1
+
+
+" Vim
+let g:indentLine_color_term = 239
+
+let g:indentLine_char = '┆'
+
+let g:indentLine_enabled = 1
