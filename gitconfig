@@ -57,3 +57,5 @@
 	user = DanielAguirre
 
 
+[core]
+	editor = vim

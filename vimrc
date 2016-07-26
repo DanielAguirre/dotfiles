@@ -18,7 +18,8 @@ Plugin 'The-NERD-Tree'
 " A Git pluign for NeerdTree
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-Plugin 'mhartington/oceanic-next'
+"Plugin 'mhartington/oceanic-next'
+"Plugin ''joshdick/onedark.vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -45,6 +46,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'yegappan/mru'
 
 Plugin 'wakatime/vim-wakatime'
+
+"check syntax
+Plugin 'sheerun/vim-polyglot'
 
 Plugin 'mattn/emmet-vim'
 " All of your Plugins must be added before the following line
@@ -87,7 +91,7 @@ endif
 
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:»·,trail:¬,nbsp:¬
 
 " Numbers
 set number
@@ -103,8 +107,9 @@ set splitright
 syntax enable             " enable syntax highlighting (previously syntax on).
 set t_Co=256              " enable 256-color mode.
 
-colorscheme OceanicNext
-set background=dark
+"colorscheme OceanicNext
+colorscheme onedark
+"set background=dark
 
 " disable arrow keys
 no <Up> <NOP>
@@ -151,3 +156,14 @@ let g:indentLine_color_term = 239
 let g:indentLine_char = '┆'
 
 let g:indentLine_enabled = 1
+
+" Enable hidden files
+let NERDTreeShowHidden=1
+let NERDTreeWinPos="right"
+
+"Ctrlp
+let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>']  }
+ 
+let g:ctrlp_custom_ignore = {
+   \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
+   \ }
